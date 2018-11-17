@@ -50,4 +50,3 @@ class OrderResource(Resource):
 
     # @.before_request
     # def get_user(self):
-    #     g.user = g.user
