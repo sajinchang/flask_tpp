@@ -15,6 +15,7 @@ from App.ext import init_ext
 # from App.modles.userModel import User
 # from App.modles.cinemaModel import Cinemas
 # from App.modles.movieModel import Movies
+# from App.modles.orderModel import Orders
 
 
 def create_app(ENV_NAME):
@@ -31,5 +32,5 @@ def create_app(ENV_NAME):
     # cities = Cities()
     # moive = Movies()
     # cinema = Cinemas()
-
+    # order = Orders()
     return app

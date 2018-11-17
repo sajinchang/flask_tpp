@@ -19,6 +19,5 @@ class Settings:
             return {
                 'msg':'Insert failed!',
                 'returnCode':402
-
             }
         return 'Insert successful!'

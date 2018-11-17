@@ -7,6 +7,8 @@
  @Software: PyCharm
  @Statement:登陆
 '''
+from flask import g
+
 '''登陆'''
 
 from flask_restful import Resource, reqparse
@@ -27,9 +29,11 @@ class LoginResource(Resource):
         passwd = info.get('passwd')
         users = User.query.filter_by(u_name = username)
         if users.count() > 0:
-            user = users.first()
-            if check_password_hash(user.u_passwd,passwd):
-                if user.active.__eq__(True):
+            g.user = users.first()
+
+            # g.usr = user
+            if check_password_hash(g.user.u_passwd,passwd):
+                if g.user.active.__eq__(True):
                     return '登陆成功'
                 return '账户被锁定，尚未激活'
             return '密码错误'

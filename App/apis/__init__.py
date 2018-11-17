@@ -13,6 +13,8 @@ from App.apis.cinemaApi import CinemaResource
 from App.apis.letterApi import SearchAllCitiesResource
 from App.apis.loginApi import LoginResource
 from App.apis.movieAdd import MovieAddResource
+from App.apis.orderApi import OrderResource
+from App.apis.payApi import PayResource
 from App.apis.permissionContorl import PermissionResource
 from App.apis.signInApi import SignResource
 
@@ -29,3 +31,5 @@ api.add_resource(LoginResource,'/login/')
 api.add_resource(CinemaResource,'/cinema/')
 api.add_resource(MovieAddResource,'/addmovie/')
 api.add_resource(PermissionResource,'/check/')
+api.add_resource(PayResource,'/pay/')
+api.add_resource(OrderResource,'/order/')

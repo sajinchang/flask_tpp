@@ -5,7 +5,18 @@
  @Site : 
  @File : settings.py
  @Software: PyCharm
+ @Statement:配置文件
 '''
+
+
+import os
+
+# 获取当前项目的路径   配置支付设置
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ALIPAY_APPID = "2016091800537304"
+APP_PRIVATE_KEY = open(os.path.join(BASE_PATH,'alipay_config/app_rsa_private_key.pem'),'r').read()
+APP_PUBLIC_KEY = open(os.path.join(BASE_PATH,'alipay_config/alipay_rsa_public_key.pem'),'r').read()
+
 
 # 拼接连接数据库的参数
 def get_db_uri(DATABASE):
@@ -33,6 +44,8 @@ class Config():
     MAIL_SERVER = 'smtp.163.com'
     MAIL_USERNAME = 'sajinde@163.com'
     MAIL_PASSWORD = 'sajinchang124816'
+
+
 
 # 开发环境
 class DevelopConfig(Config):
@@ -77,6 +90,7 @@ class ShowConfig(Config):
     }
 
     SQLALCHEMY_DATABASE_URI = get_db_uri(DATABASE)
+
 # 生产环境
 class ProductConfig(Config):
     DEBUG = True

@@ -18,16 +18,21 @@ from App.modles import db
 mail = Mail()
 cache = Cache(config={'CACHE_TYPE':'redis'})
 def init_ext(app):
+
+    # 命令行参数使用
     migrate = Migrate()
     migrate.init_app(app=app,db=db)
     db.init_app(app=app)
     Session(app=app)
 
+    # 开启调试
     debugtoolbar = DebugToolbarExtension()
     debugtoolbar.init_app(app=app)
 
+    # 使用模板
     Bootstrap(app=app)
 
+    # 初始化缓存
     cache.init_app(app=app)
 
     # 邮箱初始化
