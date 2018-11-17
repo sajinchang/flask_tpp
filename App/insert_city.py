@@ -5,6 +5,7 @@
  @Site : 
  @File : insert_city.py
  @Software: PyCharm
+ @Statement:初始化将字母和城市插入数据库
 '''
 import json
 import pymysql

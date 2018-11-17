@@ -5,6 +5,7 @@
  @Site : 
  @File : userModel.py
  @Software: PyCharm
+ @Statement:用户表
 '''
 from App.modles import db
 

@@ -5,7 +5,7 @@
  @Site : 
  @File : cinemaApi.py
  @Software: PyCharm
- @Statement:根据关键字查询所有电影院
+ @Statement:根据关键字查询所有电影院    支持模糊查询
 '''
 from flask import request
 from flask_restful import Resource, marshal_with, fields

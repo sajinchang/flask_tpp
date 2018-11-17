@@ -5,6 +5,7 @@
  @Site : 
  @File : ext.py
  @Software: PyCharm
+ @Statement:第三方库加载
 '''
 from flask_bootstrap import Bootstrap
 from flask_cache import Cache

@@ -7,7 +7,12 @@
  @Software: PyCharm
  @Statement:登陆
 '''
-from flask import g
+# from datetime import datetime
+# from re import sub
+
+from flask import session
+
+# from App.modles.orderModel import Orders
 
 '''登陆'''
 
@@ -29,15 +34,17 @@ class LoginResource(Resource):
         passwd = info.get('passwd')
         users = User.query.filter_by(u_name = username)
         if users.count() > 0:
-            g.user = users.first()
+            user = users.first()
 
-            # g.usr = user
-            if check_password_hash(g.user.u_passwd,passwd):
-                if g.user.active.__eq__(True):
+            session['userId'] = user.u_id
+            # g.userId = user.u_id
+            # print(g.userId)
+            if check_password_hash(user.u_passwd,passwd):
+                if user.active.__eq__(True):
                     return '登陆成功'
                 return '账户被锁定，尚未激活'
             return '密码错误'
-        return '用户不存在，请先注册在登陆'
+        return '用户不存在，请先注册再登陆'
 
 
 

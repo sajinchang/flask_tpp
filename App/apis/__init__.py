@@ -5,6 +5,7 @@
  @Site : 
  @File : apis.py
  @Software: PyCharm
+ @Statement:添加路由
 '''
 from flask_restful import Api
 
@@ -17,6 +18,8 @@ from App.apis.orderApi import OrderResource
 from App.apis.payApi import PayResource
 from App.apis.permissionContorl import PermissionResource
 from App.apis.signInApi import SignResource
+
+
 
 api = Api()
 

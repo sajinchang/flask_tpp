@@ -5,6 +5,7 @@
  @Site : 
  @File : letter_citiesModel.py
  @Software: PyCharm
+ @Statement:城市   字母表
 '''
 
 from App.modles import db
