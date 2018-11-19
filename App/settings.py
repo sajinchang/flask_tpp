@@ -43,7 +43,7 @@ class Config():
     # 配置邮箱验证
     MAIL_SERVER = 'smtp.163.com'
     MAIL_USERNAME = 'sajinde@163.com'
-    MAIL_PASSWORD = 'sajinchang124816'
+    MAIL_PASSWORD = 'sajinchang123456'
 
 
 
@@ -54,7 +54,7 @@ class DevelopConfig(Config):
         'dialect':'mysql',
         'driver':'pymysql',
         'username':'root',
-        'passwd':'124816',
+        'passwd':'123456',
         'host':'localhost',
         'port':3306,
         'db':'Tpp'
@@ -68,7 +68,7 @@ class TestConfig(Config):
         'dialect':'mysql',
         'driver':'pymysql',
         'username':'root',
-        'passwd':'124816',
+        'passwd':'123456',
         'host':'localhost',
         'port':3306,
         'db':'Tpp'
@@ -83,7 +83,7 @@ class ShowConfig(Config):
         'dialect':'mysql',
         'driver':'pymysql',
         'username':'root',
-        'passwd':'124816',
+        'passwd':'123456',
         'host':'localhost',
         'port':3306,
         'db':'Tpp'
@@ -98,7 +98,7 @@ class ProductConfig(Config):
         'dialect':'mysql',
         'driver':'pymysql',
         'username':'root',
-        'passwd':'124816',
+        'passwd':'123456',
         'host':'localhost',
         'port':3306,
         'db':'Tpp'
