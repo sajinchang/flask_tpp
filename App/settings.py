@@ -43,7 +43,7 @@ class Config():
     # 配置邮箱验证
     MAIL_SERVER = 'smtp.163.com'
     MAIL_USERNAME = 'sajinde@163.com'
-    MAIL_PASSWORD = 'sajinchang123456'
+    MAIL_PASSWORD = 'sajinchang124816'
 
 
 
