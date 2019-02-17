@@ -57,7 +57,7 @@ class DevelopConfig(Config):
         'passwd':'123456',
         'host':'localhost',
         'port':3306,
-        'db':'Tpp'
+        'db':'blog'
     }
     SQLALCHEMY_DATABASE_URI = get_db_uri(DATABASE)
 
